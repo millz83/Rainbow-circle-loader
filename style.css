@@ -1,0 +1,37 @@
+body {
+    background: #202628;
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    justify-content: center;
+}
+
+.rainbow-loader {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #f00, #ff8000, #ffd500, #ff0, #d4ff00, #00ff2b, #0f5, #0fa, #0ff, #00d4ff, #007fff, #2a00ff, #f0a, #f00);
+	animation: animateme-3 1s alternate ease-in-out infinite;
+	display: inline-block;
+	border: dashed 5px #202628;
+}
+.rainbow-loader:before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 50%;
+	background-color: #202628;
+	z-index: 1;
+}
+@keyframes animateme-3 {
+	from {
+		transform: rotate(0deg) scale(0.5);
+	}
+	to {
+		transform: rotate(360deg) scale(1);
+	}
+}
